@@ -1,0 +1,10 @@
+serverList=./config/managedList.lst
+for server in `cat $serverList | cut -f1 -d "."` p1c1m593
+do
+startTime=`sshcmd -s ${server} -u ${server} "ps -ef | grep javaagent | grep -v grep | tr -s ' '|cut -f5 -d' '" `
+echo $server - $startTime CST
+done
+
+
+
+ab285w@dspopus15:/home/ab285w$ /usr/sbin/swap -s |awk -F" " '{ print $9 " " $11 }' |awk -F"k" '{ print "now is free: "$2/(($1/100+$2/100))"% of swap"}'
